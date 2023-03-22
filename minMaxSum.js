@@ -6,19 +6,25 @@
 // 16 24
 
 
-const arr = [1,2,3,4,5];
+//IMP sort method 
+const numbers = [74,18,10,5,84,24,105];
+numbers.sort();
+console.log(numbers);
 
-function miniMaxSum(arr) {
-    arr.sort((a, b) => a - b)
-    let minSum = 0;
-    let maxSum = 0;
-    for (let i = 0; i < arr.length-1; i++) {
-        minSum += arr[i]
-    }
-    for (let i = arr.length - 1; i > 0; i--) {
-        maxSum += arr[i]
-    }
-    console.log(`${minSum} ${maxSum}`)
-}
 
-miniMaxSum(arr)
+// const arr = [1,2,3,4,5];
+
+// function miniMaxSum(arr) {
+//     arr.sort((a, b) => a - b)
+//     let minSum = 0;
+//     let maxSum = 0;
+//     for (let i = 0; i < arr.length-1; i++) {
+//         minSum += arr[i]
+//     }
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         maxSum += arr[i]
+//     }
+//     console.log(`${minSum} ${maxSum}`)
+// }
+
+// miniMaxSum(arr)
