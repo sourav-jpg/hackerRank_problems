@@ -5,12 +5,41 @@
 // The minimum sum is  1+3+5+7 =16 and the maximum sum is 3+5+7+9 =24. The function prints
 // 16 24
 
+//----------------------------------------------------------
 
-//IMP sort method 
-const numbers = [74,18,10,5,84,24,105];
-numbers.sort();
-console.log(numbers);
+// IMP sort method 
+// const numbers = [74,18,10,5,84,24,105];
+// numbers.sort(compare);
+// console.log(numbers);
 
+// function compare(a,b){
+//     // 1. < 0 ... a comes first
+//     // 2. 0 .... nothing will be changed
+//     // 3. > 0 ... b comes first 
+//     return a- b
+// }
+
+// const products = [
+//     {
+//         name:'laptop',
+//         price:1000
+//     },
+//     {
+//         name:'desktop',
+//         price:1600
+//     },
+//     {
+//         name:'phone',
+//         price:500
+//     },
+// ];
+
+// products.sort((a,b)=>{
+//     return a.price - b.price;
+// });
+// console.log(products);
+
+//----------------------------------------------------------
 
 // const arr = [1,2,3,4,5];
 
