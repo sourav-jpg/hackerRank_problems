@@ -4,6 +4,7 @@ const strings = ["abc", "ababa", "ab", "bc"];
 const queries = ["abc", "ababa"];
 const result = [];
 
+
 function matchingStrings(strings, queries) {
   let results = [];
 
