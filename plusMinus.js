@@ -92,7 +92,4 @@ function plusMinus(arr) {
 
 plusMinus(arr);
 
-
-const a = [-4, 3, -9, 0, 4, 1]
-
-
+const a = [-4, 3, -9, 0, 4, 1];

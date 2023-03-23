@@ -31,71 +31,76 @@
 // whiteSheetOfPaper()
 // picture frame
 
-let input = "C;M;white sheet of paper"
+let input = "C;M;white sheet of paper";
 function processData(input) {
-    //Enter your code here
-    let outputs = []
-    let text = input.slice(4)
-    if (input[0] === "S") {
-        switch (input[2]) {
-            case "M":
-                 text = text.replace("()", "").trim()
-                 text = text.split(/(?=[A-Z])/).join(" ").toLowerCase();
-                 console.log(text)
-                break;
-            case "C":
-                text = text.split(/(?=[A-Z])/);
-                text = text.map((el) => el.trim().toLowerCase())
-                text = text.join(" ")
-                console.log(text)
-                break;
-            case "V":
-                let originalText = text
-                text = text.split(/(?=[A-Z])/);
-                text = text.map((el) => el.trim().toLowerCase())
-                text = text.join(" ")
-                console.log(text)
-                break;
-        }
-         outputs.push(text)
+  //Enter your code here
+  let outputs = [];
+  let text = input.slice(4);
+  if (input[0] === "S") {
+    switch (input[2]) {
+      case "M":
+        text = text.replace("()", "").trim();
+        text = text
+          .split(/(?=[A-Z])/)
+          .join(" ")
+          .toLowerCase();
+        console.log(text);
+        break;
+      case "C":
+        text = text.split(/(?=[A-Z])/);
+        text = text.map((el) => el.trim().toLowerCase());
+        text = text.join(" ");
+        console.log(text);
+        break;
+      case "V":
+        let originalText = text;
+        text = text.split(/(?=[A-Z])/);
+        text = text.map((el) => el.trim().toLowerCase());
+        text = text.join(" ");
+        console.log(text);
+        break;
     }
-    if (input[0] === "C") {
-        switch (input[2]) {
-            case "M":
-                // text is C;M;white sheet of paper
-                // must be whiteSheetOfPaper()
-                text = text.split(/(?=[" "])/);
-                text = text.map((el,index) => {
-                    if(index === 0) return el.trim()
-                    else return (el.trim().charAt(0).toUpperCase() + el.trim().slice(1))
-                })
-                text = text.join("").concat("()")
-                console.log(text)
-                break;
-            case "C":
-                // text is C;C;coffee machine
-                // must be: CoffeMachine
-                text = text.split(/(?=[" "])/);
-                text = text.map((el,index) => (el.trim().charAt(0).toUpperCase() + el.trim().slice(1)))
-                text = text.join("")
-                console.log(text)
-                break;
-            case "V":
-                // text is C;V;mobile phone
-                // must be mobilePhone
-                text = text.split(/(?=[" "])/);
-                text = text.map((el,index) => {
-                    if(index === 0) return el.trim()
-                    else return (el.trim().charAt(0).toUpperCase() + el.trim().slice(1))
-                })
-                text = text.join("")
-                console.log(text)
-                break;
-        }
-         outputs.push(text)
+    outputs.push(text);
+  }
+  if (input[0] === "C") {
+    switch (input[2]) {
+      case "M":
+        // text is C;M;white sheet of paper
+        // must be whiteSheetOfPaper()
+        text = text.split(/(?=[" "])/);
+        text = text.map((el, index) => {
+          if (index === 0) return el.trim();
+          else return el.trim().charAt(0).toUpperCase() + el.trim().slice(1);
+        });
+        text = text.join("").concat("()");
+        console.log(text);
+        break;
+      case "C":
+        // text is C;C;coffee machine
+        // must be: CoffeMachine
+        text = text.split(/(?=[" "])/);
+        text = text.map(
+          (el, index) => el.trim().charAt(0).toUpperCase() + el.trim().slice(1)
+        );
+        text = text.join("");
+        console.log(text);
+        break;
+      case "V":
+        // text is C;V;mobile phone
+        // must be mobilePhone
+        text = text.split(/(?=[" "])/);
+        text = text.map((el, index) => {
+          if (index === 0) return el.trim();
+          else return el.trim().charAt(0).toUpperCase() + el.trim().slice(1);
+        });
+        text = text.join("");
+        console.log(text);
+        break;
     }
+    outputs.push(text);
+  }
 
-    return outputs.forEach((output) => console.log)
+  return outputs.forEach((output) => console.log);
 }
 
-processData(input)
+processData(input);

@@ -7,7 +7,7 @@
 
 //----------------------------------------------------------
 
-// IMP sort method 
+// IMP sort method
 // const numbers = [74,18,10,5,84,24,105];
 // numbers.sort(compare);
 // console.log(numbers);
@@ -15,7 +15,7 @@
 // function compare(a,b){
 //     // 1. < 0 ... a comes first
 //     // 2. 0 .... nothing will be changed
-//     // 3. > 0 ... b comes first 
+//     // 3. > 0 ... b comes first
 //     return a- b
 // }
 
@@ -41,19 +41,19 @@
 
 //----------------------------------------------------------
 
-const arr = [1,2,3,4,5];
+const arr = [1, 2, 3, 4, 5];
 
 function miniMaxSum(arr) {
-    arr.sort((a, b) => a - b)
-    let minSum = 0;
-    let maxSum = 0;
-    for (let i = 0; i < arr.length-1; i++) {
-        minSum += arr[i]
-    }
-    for (let i = arr.length - 1; i > 0; i--) {
-        maxSum += arr[i]
-    }
-    console.log(`${minSum} ${maxSum}`)
+  arr.sort((a, b) => a - b);
+  let minSum = 0;
+  let maxSum = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    minSum += arr[i];
+  }
+  for (let i = arr.length - 1; i > 0; i--) {
+    maxSum += arr[i];
+  }
+  console.log(`${minSum} ${maxSum}`);
 }
 
-miniMaxSum(arr)
+miniMaxSum(arr);
