@@ -23,4 +23,4 @@ function timeConversion(s) {
   console.log(`${hour}:${min}:${sec}`);
 }
 
-timeConversion("11:05:45AM");
+timeConversion("01:01:45PM");
